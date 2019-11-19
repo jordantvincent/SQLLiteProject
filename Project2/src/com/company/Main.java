@@ -15,21 +15,6 @@ public class Main {
 
     private static WebDriver driver;
 
-
-    public static void createDatabase(String filename) {
-        String url = "jdbc:sqlite:C:\\Users\\theli\\IdeaProjects\\Project2\\Database" + filename;
-
-        try (Connection conn = DriverManager.getConnection(url)) {
-            if (conn != null) {
-                DatabaseMetaData meta = conn.getMetaData();
-                System.out.println("Driver name: " + meta.getDriverName());
-                System.out.println("Database Created.");
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
     public static void main(String[] args) {
 
         //createDatabase("sqlite-jdbc-3.27.2.1.jar");
